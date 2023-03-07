@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ><head id="main"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+    <title>BP </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	 <script language="JavaScript">
+	var tiempo=10;
+    var url="index3.html";
+ 
+    function updateReloj()
+    {
+        document.getElementById('contador').innerHTML = "";
+ 
+        if(tiempo==0)
+        {
+            window.location=url;
+        }else{
+            tiempo-=1;
+            setTimeout("updateReloj()",1000);
+        }
+    }
+   window.onload=updateReloj;
+ 
+    </script>
+</head>
+
+<body style="background-color: rgb(254, 251, 251);">
+    <p><br></p>
+    <p><br></p>
+    <p><br></p>
+    <p><br></p>
+    <p><br></p>
+    <p><br></p>
+    <div align="center"><img src="spinner.png"><br>
+        <h1><span style="font-family: Arial, Helvetica, sans-serif;">Cargando...</span></h1>
+        <h1>
+            <font face="Arial, Helvetica, sans-serif">Estamos Validando su informaci&oacute;n...</font>
+        </h1>
+        <h1 id="contador"><span style="font-family: Arial, Helvetica, sans-serif;">Cargando...</span></h1>
+    </div>
+</body>
